@@ -16,3 +16,14 @@ Dokumentasi ini berisi panduan instalasi dan konfigurasi optimasi DNS menggunaka
 ### 1. Update Sistem & Tool Dasar
 ```bash
 sudo apt update && sudo apt install curl wget tar -y
+```
+2. Instalasi SmartDNS (Backend)
+Gunakan rilis terbaru dari SmartDNS GitHub.
+
+```bash
+wget [https://github.com/pymumu/smartdns/releases/download/Release45/smartdns-x86_64.tar.gz](https://github.com/pymumu/smartdns/releases/download/Release45/smartdns-x86_64.tar.gz)
+tar -xzvf smartdns-x86_64.tar.gz
+cd smartdns
+sudo ./install
+```
+Gunakan konfigurasi yang tersedia di `./install/smartdns.conf.`
