@@ -9,7 +9,7 @@ Dokumentasi ini berisi panduan instalasi dan konfigurasi optimasi DNS menggunaka
 ## 🏗️ Arsitektur Jaringan
 `Client` -> `AdGuard Home (Port 53)` -> `SmartDNS (Port 5353)` -> `Internet (DoH/DoT Upstreams)`
 
-![Topologi AGH+SmartDNS](./install/architecture.png)
+![Topologi AGH+SmartDNS](architecture.png)
 ---
 
 ## 🛠️ Langkah Instalasi
