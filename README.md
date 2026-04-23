@@ -17,7 +17,7 @@ Dokumentasi ini berisi panduan instalasi dan konfigurasi optimasi DNS menggunaka
 ```bash
 sudo apt update && sudo apt install curl wget tar -y
 ```
-2. Instalasi SmartDNS (Backend)
+### 2. Instalasi SmartDNS (Backend)
 Gunakan rilis terbaru dari SmartDNS GitHub.
 
 ```bash
@@ -27,3 +27,16 @@ cd smartdns
 sudo ./install
 ```
 Gunakan konfigurasi yang tersedia di `./install/smartdns.conf.`
+
+### 3. Instalasi AdGuard Home (Frontend)
+```Bash
+curl -s -S -L [https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh](https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh) | sh -s -- -v
+```
+Akses di `http://IP-SERVER:3000` untuk setup awal.
+
+⚙️ Konfigurasi Penting
+# 1. Di SmartDNS: Jalankan di port 5353 agar tidak bentrok dengan AGH.
+
+# 2. Di AdGuard Home: Masukkan 127.0.0.1:5353 di menu Settings -> DNS Settings -> Upstream DNS Servers.
+
+# 3. Optimasi: Matikan Cache di AdGuard Home dan biarkan SmartDNS yang menangani seluruh Cache jaringan.
