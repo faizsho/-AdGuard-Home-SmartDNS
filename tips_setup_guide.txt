@@ -1,0 +1,15 @@
+TIPS OPTIMASI ADGUARD HOME:
+---------------------------
+1. Buka Dashboard AdGuard Home.
+2. Masuk ke 'Settings' -> 'DNS Settings'.
+3. Upstream DNS Servers: Isi dengan '127.0.0.1:5353'.
+4. DNS Cache Configuration:
+   - Cache size: 0 (Penting! Biarkan SmartDNS yang handle cache).
+   - Override minimum TTL: 0
+   - Override maximum TTL: 0
+5. Klik 'Save'.
+
+TIPS CEK STATUS:
+---------------------------
+Cek apakah SmartDNS jalan: systemctl status smartdns
+Cek port yang terbuka: netstat -tulpn | grep -E '53|5353'
