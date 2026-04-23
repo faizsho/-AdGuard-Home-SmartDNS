@@ -35,8 +35,8 @@ curl -s -S -L [https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/
 Akses di `http://IP-SERVER:3000` untuk setup awal.
 
 ⚙️ Konfigurasi Penting
-# 1. Di SmartDNS: Jalankan di port 5353 agar tidak bentrok dengan AGH.
+#### 1. Di SmartDNS: Jalankan di port 5353 agar tidak bentrok dengan AGH.
 
-# 2. Di AdGuard Home: Masukkan 127.0.0.1:5353 di menu Settings -> DNS Settings -> Upstream DNS Servers.
+#### 2. Di AdGuard Home: Masukkan 127.0.0.1:5353 di menu Settings -> DNS Settings -> Upstream DNS Servers.
 
-# 3. Optimasi: Matikan Cache di AdGuard Home dan biarkan SmartDNS yang menangani seluruh Cache jaringan.
+#### 3. Optimasi: Matikan Cache di AdGuard Home dan biarkan SmartDNS yang menangani seluruh Cache jaringan.
