@@ -11,7 +11,8 @@ Dokumentasi ini berisi panduan instalasi dan konfigurasi optimasi DNS menggunaka
 
 ![Topologi AGH+SmartDNS](architecture.png)
 ---
-
+![Topologi AGH+SmartDNS](Flow.png)
+---
 ## 🛠️ Langkah Instalasi
 
 ### 1. Update Sistem & Tool Dasar
