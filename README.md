@@ -23,8 +23,19 @@ sudo apt update && sudo apt install curl wget tar -y
 Gunakan rilis terbaru dari SmartDNS GitHub.
 
 ```bash
-wget [https://github.com/pymumu/smartdns/releases/download/Release45/smartdns-x86_64.tar.gz](https://github.com/pymumu/smartdns/releases/download/Release45/smartdns-x86_64.tar.gz)
-tar -xzvf smartdns-x86_64.tar.gz
+# Pindah ke direktori sementara
+cd /tmp
+
+# Ambil link download rilis terbaru secara otomatis
+URL=$(curl -s https://api.github.com/repos/pymumu/smartdns/releases/latest | grep "browser_download_url.*x86_64-linux-all.tar.gz" | cut -d '"' -f 4)
+
+# Download file tar.gz-nya
+wget $URL
+
+# Ekstrak file yang baru di-download
+tar -xvf smartdns*.x86_64-linux-all.tar.gz
+
+# Masuk ke folder hasil ekstrak (biasanya bernama 'smartdns')
 cd smartdns
 sudo ./install
 ```
