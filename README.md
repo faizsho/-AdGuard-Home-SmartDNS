@@ -37,7 +37,7 @@ tar -xvf smartdns*.x86_64-linux-all.tar.gz
 
 # Masuk ke folder hasil ekstrak (biasanya bernama 'smartdns')
 cd smartdns
-sudo ./install
+sudo ./install -i
 ```
 Gunakan konfigurasi yang tersedia di `./install/smartdns.conf.`
 
