@@ -13,3 +13,19 @@ TIPS CEK STATUS:
 ---------------------------
 Cek apakah SmartDNS jalan: systemctl status smartdns
 Cek port yang terbuka: netstat -tulpn | grep -E '53|5353'
+
+
+
+1. Warning TCP Fast Open — perlu fix kernel:
+```
+tcp-fast-open enabled but net.ipv4.tcp_fastopen does not allow it
+```
+Config pdns sudah benar, tapi kernel belum diizinkan. Fix:
+bash# 
+Aktifkan TCP Fast Open di kernel (mode 3 = client + server)
+
+echo 3 > /proc/sys/net/ipv4/tcp_fastopen
+
+# Biar permanen setelah reboot:
+echo "net.ipv4.tcp_fastopen = 3" >> /etc/sysctl.conf
+sysctl -p
